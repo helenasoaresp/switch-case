@@ -10,11 +10,34 @@
     */
 
     // ENTRADA
-    
-    
-    // PROCESSAMENTO
+    const idade = Number(prompt("Informe a idade do seu cão: "));
+    const porte = prompt("Informe o porte do seu cão: Porte pequeno; Porte médio; Grande");
 
-    
+    // PROCESSAMENTO
+    let resultado = 0
+
     // SAÍDA
+    switch (porte) {
+        case "Porte pequeno":
+        case "porte pequeno":
+            resultado = idade * 5;
+            alert(`A idade do seu cão (em anos caninos) é: ${resultado} anos`);
+            break
+
+        case "Porte médio":
+        case "porte médio":
+            resultado = idade * 6;
+            alert(`A idade do seu cão (em anos caninos) é: ${resultado} anos`);
+            break
+
+        case "Grande":
+        case "grande":
+            resultado = idade * 7;
+            alert(`A idade do seu cão (em anos caninos) é: ${resultado} anos`);
+            break
+
+        default: 
+        alert(`Informe um valor válido!`)
+    }
 
 </script>
