@@ -7,10 +7,62 @@
     */
 
     //ENTRADA
-    const hemisferio = prompt("Informe o hemisfério em que está (Norte ou Sul): ");
+    const hemisferio = prompt("Informe o hemisfério em que está (Norte ou Sul): ").toLowerCase();
     const mes = Number(prompt("Informe o mês atual (1, 2, 3...): "));
-    
+
     //PROCESSAMENTO
+    switch (hemisferio) {
+        case "sul":
+            switch (mes) {
+                case "12":
+                case "1":
+                case "2":
+                    alert(`Verão`);
+                    break;
+
+                case "3":
+                case "4":
+                case "5":
+                    alert(`Outono`);
+                    break;
+
+                case "6":
+                case "7":
+                case "8":
+                    alert(`Inverno`);
+
+                case "9":
+                case "10":
+                case "11":
+                    alert(`Primavera`);
+            }
+            break;
+        case "norte":
+            switch (mes) {
+                case "12":
+                case "1":
+                case "2":
+                    alert(`Inverno`);
+                    break;
+
+                case "3":
+                case "4":
+                case "5":
+                    alert(`Primavera`);
+                    break;
+
+                case "6":
+                case "7":
+                case "8":
+                    alert(`Verão`);
+                    break;
+
+                case "9":
+                case "10":
+                case "11":
+                    alert(`Outono`);
+            }
+    }
 
     //SAÍDA
 
