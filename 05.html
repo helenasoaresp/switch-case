@@ -1,4 +1,3 @@
-<meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: INVESTIGAÇÃO CRIMINAL
@@ -8,75 +7,61 @@
     - "Mora perto da vítima?"
     - "Devia para a vítima?"
     - "Já trabalhou com a vítima?"
-    O script deve no final emitir uma classificação sobre a participação da pessoa no crime.
-    Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
+    O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 
+    2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino".
     Caso contrário, ele será classificado como "Inocente".
     */
 
-    //ENTRADA
-    const telefonou = prompt("Telefonou para a vítima? (Responda com sim ou Não)").toLocaleLowerCase();
-    const local = prompt("Esteve no local do crime? (Responda com sim ou Não)").toLocaleLowerCase();
-    const ondeMora = prompt("Mora perto da vítima? (Responda com sim ou Não)").toLocaleLowerCase();
-    const trabalhou = prompt("Já trabalhou com a vítima? (Responda com sim ou Não)").toLocaleLowerCase();
-    const devia = prompt("Devia para a vítima? (Responda com sim ou Não)").toLocaleLowerCase();
-
+    // ENTRADA
+    const telefone = prompt("Você telefonou para a vítima? Responda: Sim ou Não").toLowerCase();
+    const local = prompt("Você esteve no local do crime? Responda: Sim ou Não").toLowerCase();
+    const moraPerto = prompt("Você mora perto da vítima? Responda: Sim ou Não").toLowerCase();
+    const deviaParaVitima = prompt("Você devia para a vítima? Responda: Sim ou Não").toLowerCase();
+    const trabalhouComVitima = prompt("Você já trabalhou com a vítima? Responda: Sim ou Não").toLowerCase();
+    
+    // PROCESSAMENTO
     let sim = 0;
 
-    //PROCESSAMENTO
-    switch (telefonou) {
+    switch (telefone) {
         case "sim":
-            sim ++
+            sim++;
+            break;
     }
-
     switch (local) {
         case "sim":
-            sim ++
-            break;
+            sim++;
+            break; 
     }
-
-    switch (ondeMora) {
+    switch (moraPerto) {
         case "sim":
-            sim ++;
+            sim++;
             break;
     }
-
-    switch (trabalhou) {
+    switch (deviaParaVitima) {
         case "sim":
-            sim ++;
+            sim++;
             break;
     }
-
-    switch (devia) {
+    switch (trabalhouComVitima) {
         case "sim":
-            sim  ++;
+            sim++;
             break;
-            default:
     }
 
+    // SAÍDA
     switch (sim) {
         case 2:
-            alert(`Suspeita`);
+            alert("Suspeita!");
             break;
-    }
-
-    switch (sim) {
         case 3:
-            alert(`Cúmplice`);
-            break;
-    }
-
-    switch (sim) {
         case 4:
-            alert(`Cúmplice`);
+            alert("Cúmplice!");
+            break;
+        case 5: 
+            alert("Assassino!");
+            break;
+        default: 
+            alert("Inocente!");
             break;
     }
-
-    switch (sim) {
-        case 5:
-            alert(`Assassino`);
-            break;
-            default:
-    }
-    //SAÍDA
-
 </script>

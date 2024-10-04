@@ -1,68 +1,83 @@
 <meta charset="UTF-8">
 <script>
     /*
-    PROBLEMA: ESTAÇÃO DO ANO
-    Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
-    De acordo com as respostas, informe qual a estação do ano correspondente.
-    */
+       PROBLEMA: ESTAÇÃO DO ANO
+       Faça um script que pergunte para a pessoa em qual hemisfério ela está e qual o mês atual.
+       De acordo com as respostas, informe qual a estação do ano correspondente.
+       */
 
     //ENTRADA
-    const hemisferio = prompt("Informe o hemisfério em que está (Norte ou Sul): ").toLowerCase();
-    const mes = Number(prompt("Informe o mês atual (1, 2, 3...): "));
 
-    //PROCESSAMENTO
+    const hemisferio = prompt("Informe o hemisfério que você está: Norte ou Sul").toLowerCase();
+    const mesAtual = Number(prompt("Informe o mês que você está: 1; 2; 3..."));
+
+    //SAÍDA
+
     switch (hemisferio) {
-        case "sul":
-            switch (mes) {
-                case "12":
-                case "1":
-                case "2":
+        case "norte":
+            switch (mesAtual) {
+                case 12:
+                case 1:
+                case 2:
+                    alert(`Inverno`);
+                    break;
+
+                case 3:
+                case 4:
+                case 5:
+                    alert(`primavera`);
+                    break;
+
+                case 6:
+                case 7:
+                case 8:
                     alert(`Verão`);
                     break;
 
-                case "3":
-                case "4":
-                case "5":
+                case 9:
+                case 10:
+                case 11:
                     alert(`Outono`);
                     break;
 
-                case "6":
-                case "7":
-                case "8":
-                    alert(`Inverno`);
-
-                case "9":
-                case "10":
-                case "11":
-                    alert(`Primavera`);
+                default:
+                    alert(`Inválido`);
+                    break;
             }
             break;
-        case "norte":
-            switch (mes) {
-                case "12":
-                case "1":
-                case "2":
+        case "sul":
+            switch (mesAtual) {
+                case 12:
+                case 1:
+                case 2:
+                    alert(`Verão`);
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    alert(`Outono`);
+                    break;
+                case 6:
+                case 7:
+                case 8:
                     alert(`Inverno`);
                     break;
-
-                case "3":
-                case "4":
-                case "5":
+                case 9:
+                case 10:
+                case 11:
                     alert(`Primavera`);
                     break;
 
-                case "6":
-                case "7":
-                case "8":
-                    alert(`Verão`);
+                default:
+                    alert(`Inválido`);
                     break;
-
-                case "9":
-                case "10":
-                case "11":
-                    alert(`Outono`);
             }
-    }
+            break;
+        default:
+            alert(`Hemisfério inválido`);
+            break;
+    };
+
 
     //SAÍDA
 
